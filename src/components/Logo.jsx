@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Logo = () => {
     return (
         <div className="logo font-bold text-white text-2xl">
