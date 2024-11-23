@@ -170,8 +170,9 @@ const Manager = () => {
           </div>
 
           <div className='bg-slate-3000 w-full flex justify-end'>
-
             <button onClick={savePassword} className='flex justify-center items-center bg-green-500 rounded-full  px-6 py-1 mx-auto0 text-xs font-bold hover:bg-green-400 gap-2'><lord-icon src="https://cdn.lordicon.com/jgnvfzqg.json" trigger="loop" colors="primary:#000000"></lord-icon>Save Password</button>
+          {/* disabled={form.username.length < 1} disabled={form.password.length < 1} */}
+            <button onClick={savePassword} disabled={form.site.length < 1} className='disabled:opacity-30 flex justify-center items-center bg-green-500 rounded-full  px-6 py-1 mx-auto0 text-xs font-bold hover:bg-green-400 gap-2'><lord-icon src="https://cdn.lordicon.com/jgnvfzqg.json" trigger="loop" colors="primary:#000000"></lord-icon>Save Password</button>
 
           </div>
 
@@ -259,7 +260,7 @@ const Manager = () => {
 
                   <div className="flex justify-center items-center">
 
-                    <span>{item.password}</span>
+                    <span>{"*".repeat(item.password.length)}</span>
 
                     <div className='cursor-pointer' onClick={() => { copyText(item.password) }}>
                       <lord-icon
