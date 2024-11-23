@@ -5,11 +5,16 @@ const Navbar = () => {
     const handleRedirect = () => {
         // window.location.href = "https://github.com/Zeeshanx01";
         window.open("https://github.com/Zeeshanx01", "_blank", "noopener,noreferrer");
-      };
+    };
     return (
         <nav className='bg-slate-800 flex text-white justify-evenly items-center h-[5vh] min-h-10 drop-shadow-xl p-1  fixed top-0 w-full z-10'>
 
-            <Logo />
+            {/* <Logo /> */}
+            <div className="logo font-bold text-white text-2xl">
+                <span className='text-green-700'>&lt;</span>
+                Pass
+                <span className='text-green-700'>OP/&gt;</span>
+            </div>
 
             {/* <ul className='flex gap-2 text-sm text-slate-300'>
                 <a href="/"><li>Home</li></a>
