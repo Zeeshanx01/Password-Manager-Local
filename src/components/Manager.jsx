@@ -171,7 +171,7 @@ const Manager = () => {
 
           <div className='bg-slate-3000 w-full flex justify-end'>
           {/* disabled={form.username.length < 1} disabled={form.password.length < 1} */}
-            <button onClick={savePassword} disabled={form.site.length < 1} className='disabled:opacity-30 flex justify-center items-center bg-green-500 rounded-full  px-6 py-1 mx-auto0 text-xs font-bold hover:bg-green-400 gap-2'><lord-icon src="https://cdn.lordicon.com/jgnvfzqg.json" trigger="loop" colors="primary:#000000"></lord-icon>Save Password</button>
+            <button onClick={savePassword} disabled={form.site.length < 1 || form.username.length < 1 || form.password.length < 1}  className='disabled:opacity-30 flex justify-center items-center bg-green-500 rounded-full  px-6 py-1 mx-auto0 text-xs font-bold hover:bg-green-400 gap-2'><lord-icon src="https://cdn.lordicon.com/jgnvfzqg.json" trigger="loop" colors="primary:#000000"></lord-icon>Save Password</button>
 
           </div>
 
