@@ -198,7 +198,7 @@ const Manager = () => {
 
 
 
-      <div className=" bg-green-100 drop-shadow-2xl mx-auto my-4 mt-1 mb-20 max-sm:mx-4 max-w-4xl min-h-[13rem] rounded-xl overflow-hidden">
+      <div className=" bg-green-100 drop-shadow-2xl md:mx-auto my-4 mt-1 mb-20 max-sm:mx-1 sm:mx-4 max-w-4xl min-h-[13rem] rounded-xl overflow-hidden">
 
         <table classname="table-auto w-full">
 
@@ -222,7 +222,7 @@ const Manager = () => {
 
                   <div className="flex justify-center items-center">
 
-                    <a href={item.site} target='_blank'> {item.site}</a>
+                    <a href={item.site} target='_blank'  className='overflow-hidden max-sm:w-16 max-md:w-40 md:w-40 lg:w-60'> {item.site}</a>
 
                     <div className='cursor-pointer' onClick={() => { copyText(item.site) }}>
                       {/* , 'paddingTop':'3px' */}
@@ -241,7 +241,7 @@ const Manager = () => {
 
                   <div className="flex justify-center items-center">
 
-                    <span>{item.username}</span>
+                    <span className='overflow-hidden max-sm:w-16 max-md:w-40 md:w-40 lg:w-60'>{item.username}</span>
 
                     <div className='cursor-pointer' onClick={() => { copyText(item.username) }}>
                       <lord-icon
@@ -259,7 +259,7 @@ const Manager = () => {
 
                   <div className="flex justify-center items-center">
 
-                    <span>{"*".repeat(item.password.length)}</span>
+                    <span  className='overflow-hidden max-sm:w-16 max-md:w-40 md:w-40 lg:w-60'>{"*".repeat(item.password.length)}</span>
 
                     <div className='cursor-pointer' onClick={() => { copyText(item.password) }}>
                       <lord-icon
