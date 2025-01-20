@@ -63,7 +63,7 @@ const Manager = () => {
 
 
   const savePassword = () => {
-    if (form.site.length > 1 && form.username.length > 1 && form.password.length > 1) {
+    if (form.site.length > 0 && form.username.length > 0 && form.password.length > 0) {
       // alert("Saved")
       // console.log(form)
       setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
