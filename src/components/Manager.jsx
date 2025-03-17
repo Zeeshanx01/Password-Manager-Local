@@ -148,7 +148,7 @@ const Manager = () => {
       <p className='text-green-900 font-bold text-xs text-center'>Your own Password Manager</p>
 
 
-      <div className="bg-stone-100 drop-shadow-2xl mx-auto my-4 max-sm:mx-4 max-w-4xl rounded-xl">
+      <div className="bg-stone-100 drop-shadow-2xl mx-auto my-4 max-sm:mx-4 max-w-4xl rounded-xl sticky top-14 z-10 bg-opacity-50 backdrop-blur-md">
 
         <div className=' flex flex-col p-4 gap-2'>
 
