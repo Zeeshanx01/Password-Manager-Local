@@ -329,124 +329,124 @@ const Manager = () => {
       {/* SMALL SCREEN TABLE */}
       <div className="duration-300 bg-green-50 md:hidden drop-shadow-xl my-4 mt-1 mb-12 max-sm:mb-8 max-sm:mx-0 sm:mx-4 max-w-4xl rounded-xl overflow-hidden">
 
-<table className="duration-300 table-auto w-full border-collapse">
-  <thead className='bg-green-800 text-white '>
-    <tr>
-      <th className='p-3 text-center'>Website</th>
-      <th className='p-3 text-center'>Username</th>
-      <th className='p-3 text-center'>Password</th>
-    </tr>
-  </thead>
+        <table className="duration-300 table-auto w-full border-collapse">
+          <thead className='bg-green-800 text-white '>
+            <tr>
+              <th className='p-3 text-center'>Website</th>
+              <th className='p-3 text-center'>Username</th>
+              <th className='p-3 text-center'>Password</th>
+            </tr>
+          </thead>
 
-  {passwordArray.length !== 0 &&
-    <tbody>
-      {passwordArray.map((item, index) => (
-        <React.Fragment key={index}>
-          {/* Data Row */}
-          <tr className="border-2 border-white bg-green-100 ">
-            {/* Website */}
-            <td className='p-2 border-2 border-white'>
-              <div className="flex justify-between items-center">
-                <a href={item.site} target='_blank' className="truncate max-w-[100px] sm:max-w-[150px] text-green-900 font-medium ">
-                  {item.site}
-                </a>
-                <button
-                  onClick={() => copyText(item.site)}
-                  className="ml-2 p-1.5  rounded-lg border "
-                >
-                  <lord-icon
-                    style={{ width: '20px', height: '20px' }}
-                    src="https://cdn.lordicon.com/depeqmsz.json"
-                    trigger="hover"
-                  />
-                </button>
-              </div>
-            </td>
+          {passwordArray.length !== 0 &&
+            <tbody>
+              {passwordArray.map((item, index) => (
+                <React.Fragment key={index}>
+                  {/* Data Row */}
+                  <tr className="border border-white bg-green-100 ">
+                    {/* Website */}
+                    <td className='p-2 '>
+                      <div className="flex justify-between items-center">
+                        <a href={item.site} target='_blank' className="truncate max-w-[80px]  sm:max-w-[150px] text-green-900 font-medium ">
+                          {item.site}
+                        </a>
+                        <button
+                          onClick={() => copyText(item.site)}
+                          className="ml-2 p-1.5  rounded-lg border "
+                        >
+                          <lord-icon
+                            style={{ width: '20px', height: '20px' }}
+                            src="https://cdn.lordicon.com/depeqmsz.json"
+                            trigger="hover"
+                          />
+                        </button>
+                      </div>
+                    </td>
 
-            {/* Username */}
-            <td className='p-2 border-2 border-white'>
-              <div className="flex justify-between items-center">
-                <span className="truncate max-w-[100px] sm:max-w-[150px] text-gray-700">
-                  {item.username}
-                </span>
-                <button
-                  onClick={() => copyText(item.username)}
-                  className="ml-2 p-1.5  rounded-lg "
-                >
-                  <lord-icon
-                    style={{ width: '20px', height: '20px' }}
-                    src="https://cdn.lordicon.com/depeqmsz.json"
-                    trigger="hover"
-                  />
-                </button>
-              </div>
-            </td>
+                    {/* Username */}
+                    <td className='p-2 border border-white'>
+                      <div className="flex justify-between items-center">
+                        <span className="truncate max-w-[80px]  sm:max-w-[150px] text-gray-700">
+                          {item.username}
+                        </span>
+                        <button
+                          onClick={() => copyText(item.username)}
+                          className="ml-2 p-1.5  rounded-lg "
+                        >
+                          <lord-icon
+                            style={{ width: '20px', height: '20px' }}
+                            src="https://cdn.lordicon.com/depeqmsz.json"
+                            trigger="hover"
+                          />
+                        </button>
+                      </div>
+                    </td>
 
-            {/* Password */}
-            <td className='p-2 border-2 border-white'>
-              <div className="flex justify-between items-center">
-                <span className="truncate max-w-[100px] sm:max-w-[150px] font-mono text-gray-800">
-                  {"*".repeat(item.password.length)}
-                </span>
-                <button
-                  onClick={() => copyText(item.password)}
-                  className="ml-2 p-1.5  rounded-lg "
-                >
-                  <lord-icon
-                    style={{ width: '20px', height: '20px' }}
-                    src="https://cdn.lordicon.com/depeqmsz.json"
-                    trigger="hover"
-                  />
-                </button>
-              </div>
-            </td>
-          </tr>
+                    {/* Password */}
+                    <td className='p-2 border border-white'>
+                      <div className="flex justify-between items-center">
+                        <span className="truncate max-w-[80px]  sm:max-w-[150px] font-mono text-gray-800">
+                          {"*".repeat(item.password.length)}
+                        </span>
+                        <button
+                          onClick={() => copyText(item.password)}
+                          className="ml-2 p-1.5  rounded-lg "
+                        >
+                          <lord-icon
+                            style={{ width: '20px', height: '20px' }}
+                            src="https://cdn.lordicon.com/depeqmsz.json"
+                            trigger="hover"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
 
-          {/* Actions Row */}
-          <tr className="border-2 border-white bg-green-100">
-            <td colSpan="3" className="p-2">
-              <div className="flex justify-end items-center space-x-3 pr-2">
-                <button
-                  onClick={() => editPassword(item.id)}
-                  className="px-3 py-1.5 bg-green-200 hover:bg-green-300 border rounded-full flex items-center space-x-2 transition-colors"
-                >
-                  <lord-icon
-                    src="https://cdn.lordicon.com/fikcyfpp.json"
-                    trigger="hover" 
-                    stroke="bold"
-                    colors="primary:#121331,secondary:#a66037"
-                    style={{ width: '18px', height: '18px' }}
-                  />
-                  <span>Edit</span>
-                </button>
-                <button
-                  onClick={() => deletePassword(item.id)}
-                  className="px-3 py-1.5 bg-red-200 hover:bg-red-300 rounded-full flex items-center space-x-2 transition-colors"
-                >
-                  <lord-icon
-                    src="https://cdn.lordicon.com/hwjcdycb.json"
-                    trigger="hover"
-                    stroke="bold"
-                    colors="primary:#121331,secondary:#e83a30"
-                    style={{ width: '18px', height: '18px' }}
-                  />
-                  <span>Delete</span>
-                </button>
-              </div>
-            </td>
-          </tr>
-        </React.Fragment>
-      ))}
-    </tbody>
-  }
+                  {/* Actions Row */}
+                  <tr className="border border-white bg-green-100">
+                    <td colSpan="3" className="p-2">
+                      <div className="flex justify-end items-center space-x-3 pr-2">
+                        <button
+                          onClick={() => editPassword(item.id)}
+                          className="px-3 py-1.5 bg-green-200 hover:bg-green-300 border rounded-full flex items-center space-x-2 transition-colors"
+                        >
+                          <lord-icon
+                            src="https://cdn.lordicon.com/fikcyfpp.json"
+                            trigger="hover"
+                            stroke="bold"
+                            colors="primary:#121331,secondary:#a66037"
+                            style={{ width: '18px', height: '18px' }}
+                          />
+                          <span>Edit</span>
+                        </button>
+                        <button
+                          onClick={() => deletePassword(item.id)}
+                          className="px-3 py-1.5 bg-red-200 hover:bg-red-300 rounded-full flex items-center space-x-2 transition-colors"
+                        >
+                          <lord-icon
+                            src="https://cdn.lordicon.com/hwjcdycb.json"
+                            trigger="hover"
+                            stroke="bold"
+                            colors="primary:#121331,secondary:#e83a30"
+                            style={{ width: '18px', height: '18px' }}
+                          />
+                          <span>Delete</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </React.Fragment>
+              ))}
+            </tbody>
+          }
 
-  {passwordArray.length === 0 &&
-    <div className='text-center p-6 text-lg max-sm:text-base text-gray-600'>
-      No Passwords to show
-    </div>
-  }
-</table>
-</div>
+          {passwordArray.length === 0 &&
+            <div className='text-center p-6 text-lg max-sm:text-base text-gray-600'>
+              No Passwords to show
+            </div>
+          }
+        </table>
+      </div>
 
 
 
