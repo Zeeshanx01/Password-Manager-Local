@@ -347,12 +347,12 @@ const Manager = () => {
                     {/* Website */}
                     <td className='p-2 '>
                       <div className="flex justify-between items-center">
-                        <a href={item.site} target='_blank' className="truncate max-w-[80px]  sm:max-w-[150px] text-green-900 font-medium ">
+                        <a href={item.site} target='_blank' className="truncate max-w-[120px] max-sm:max-w-[70px]  sm:max-w-[150px] text-green-900 font-medium ">
                           {item.site}
                         </a>
                         <button
                           onClick={() => copyText(item.site)}
-                          className="ml-2 p-1.5  rounded-lg border "
+                          className="ml2 p1.5  roundedlg  "
                         >
                           <lord-icon
                             style={{ width: '20px', height: '20px' }}
@@ -366,12 +366,12 @@ const Manager = () => {
                     {/* Username */}
                     <td className='p-2 border border-white'>
                       <div className="flex justify-between items-center">
-                        <span className="truncate max-w-[80px]  sm:max-w-[150px] text-gray-700">
+                        <span className="truncate max-w-[120px] max-sm:max-w-[70px]  sm:max-w-[150px] text-gray-700">
                           {item.username}
                         </span>
                         <button
                           onClick={() => copyText(item.username)}
-                          className="ml-2 p-1.5  rounded-lg "
+                          className="ml2 p1.5  roundedlg "
                         >
                           <lord-icon
                             style={{ width: '20px', height: '20px' }}
@@ -385,12 +385,12 @@ const Manager = () => {
                     {/* Password */}
                     <td className='p-2 border border-white'>
                       <div className="flex justify-between items-center">
-                        <span className="truncate max-w-[80px]  sm:max-w-[150px] font-mono text-gray-800">
+                        <span className="truncate max-w-[120px] max-sm:max-w-[70px]  sm:max-w-[150px] font-mono text-gray-800">
                           {"*".repeat(item.password.length)}
                         </span>
                         <button
                           onClick={() => copyText(item.password)}
-                          className="ml-2 p-1.5  rounded-lg "
+                          className="ml2 p1.5  roundedlg "
                         >
                           <lord-icon
                             style={{ width: '20px', height: '20px' }}
